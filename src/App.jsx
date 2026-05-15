@@ -1,33 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { LoadingScreen } from './components/LoadingScreen'
 import './App.css'
-
+import "./index.css"
+import  Navbar  from './components/Navbar'
+import MobileMenu  from './components/MobileMenu'
+import Home from './components/Home'
+import Project from './components/Project'
+import Contact from './components/Contact'
+import About from './components/About'
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [isloaded, setIsloaded] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {!isloaded && <LoadingScreen onComplete={() => setIsloaded(true)} />} {" "}
+      <div className={`min-h-screen transition-opacity duration-700 ${isloaded ? "opacity-100" : "opacity-0"}bg-black text-gray-100`}>
+
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Home />
+        <About />
+        <Project />
+        <Contact/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
