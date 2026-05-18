@@ -16,7 +16,7 @@ export function LoadingScreen({ onComplete }){
         }, 100)
         return ()=>clearInterval(interval)
     }, [onComplete])
-    return (<div className="fixed insert-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center">
+    return (<div className="fixed insert-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center z-900">
         <div className="mb-4 text-4xl font-momo font-bold">{text} <span className="animate-blink ml-1">|</span>
         </div>
 

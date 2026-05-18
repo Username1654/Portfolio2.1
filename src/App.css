@@ -1,10 +1,10 @@
-/* #root {
+ /* #root {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-  }
-
+  } */
+/*
   .logo {
     height: 6em;
     padding: 1.5em;
@@ -39,4 +39,14 @@
 
   .read-the-docs {
     color: #888;
-  } */
+   }  */
+     :root{
+      overflow-x: hidden;
+        font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+     }
+     #con{
+      background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.pixabay.com%2Fanimation%2F2023%2F03%2F19%2F02%2F34%2F02-34-11-741_512.gif&f=1&nofb=1&ipt=603146f4f8d42b8e8faf30d6f110257fb3b9dd2feb25439e1689683d9c2165e2");
+     }
+     

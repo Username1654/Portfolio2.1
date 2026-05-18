@@ -14,10 +14,10 @@ function App() {
   return (
     <>
       {!isloaded && <LoadingScreen onComplete={() => setIsloaded(true)} />} {" "}
-      <div className={`min-h-screen transition-opacity duration-700 ${isloaded ? "opacity-100" : "opacity-0"}bg-black text-gray-100`}>
+      <div className={`min-h-screen transition-opacity duration-700${isloaded ? "opacity-100" : "opacity-0"}bg-black text-gray-100`} id="con">
 
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} className="z-900"/>
+        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} className="z-900"/>
         <Home />
         <About />
         <Project />

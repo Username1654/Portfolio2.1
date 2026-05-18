@@ -1,13 +1,13 @@
 import RevealOnScroll from "./RevealOnScroll"
 export default function Contact() {
     return (
-        <section id="contact" className="min-h-screen flex items-center justify-center py-20">
+        <section id="contact" className="min-h-screen flex items-center justify-center py-20 w-[100%]">
             <RevealOnScroll>
-                <div className="px-4 w-150">
+                <div className="px-4 w-full bg-[rgba(10,10,10,0.8)]">
                     <h2 className="text-3xl font-bold mb-8 bg-gradient from-blue-500 to-cyan-400 text-center">Get In Touch</h2>
                     <form className="space-y-6">
                         <div className="relative">
-                            <input type="text" id="name" name="name" required className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500"
+                            <input type="text" id="name" name="name" required className="w-[90%] bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500 width:90%"
                              placeholder="name..."/>
                         </div>
                         <div className="relative">
